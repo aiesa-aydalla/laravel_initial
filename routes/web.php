@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\CreateUser;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,7 +15,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    Route::get('/test-page', function () {
-        return view('livewire.test-page');
-    })->name('test-page');
+
+    Route::get('/create-user', CreateUser::class)->name('create-user');
 });

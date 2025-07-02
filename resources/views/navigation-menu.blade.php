@@ -12,13 +12,13 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-nav-link wire:navigate href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('test-page') }}" :active="request()->routeIs('test-page')">
-                        {{ __('Test Page') }}
+                    <x-nav-link wire:navigate href="{{ route('create-user') }}" :active="request()->routeIs('create-user')">
+                        {{ __('Create User') }}
                     </x-nav-link>
                 </div>
             </div>
